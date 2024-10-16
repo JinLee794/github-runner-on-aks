@@ -21,6 +21,7 @@ then
         echo 'alias k=kubectl' >> ~/.bashrc
         source ~/.bashrc
     fi
+    rm kubectl
 else
     echo "kubectl is already installed."
 fi
@@ -32,6 +33,7 @@ then
     curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
     chmod 700 get_helm.sh
     ./get_helm.sh
+    rm get_helm.sh
 else
     echo "Helm is already installed."
 fi
@@ -48,7 +50,6 @@ then
     
     # sudo may be required
     sudo az aks install-cli
-
 else
     echo "kubelogin is already installed."
 fi
